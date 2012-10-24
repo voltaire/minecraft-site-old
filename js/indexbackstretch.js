@@ -5,6 +5,7 @@ var images = [
     "http://mc.voltaire.sh/i/hillsstorage.png",
     "http://mc.voltaire.sh/i/nightcheney.png",
     "http://mc.voltaire.sh/i/nokbarmountain2.png",
+    "http://mc.voltaire.sh/i/nokbarstorage.png",
     "http://mc.voltaire.sh/i/thunderbase.png"
 ];
         
