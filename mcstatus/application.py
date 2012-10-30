@@ -4,13 +4,24 @@ from minecraft_query import MinecraftQuery
 app = Flask(__name__)
 
 @app.route('/mcstatus')
+
 def returnStatus():
-    query = MinecraftQuery("142.54.162.42", 25565)
-    basic_status = query.get_status()
-    all_status = query.get_rules()
-    server_info = 'The server has %d / %d players.' % (basic_status['numplayers'], basic_status['maxplayers'])
-    status_info = 'Online now: %s' % (all_status['players'])
-    return "<pre>" + server_info + "\n" + status_info + "</pre>"
+    
+    try:
+        query = MinecraftQuery("mc.voltaire.sh", 25565, 10, 3)
+        basicQuery = query.get_status()
+        fullQuery = query.get_rules()
+
+    except socket.error as e:
+        if not options.quiet:
+            return "Server is down or unreachable:\n" + e.message
+
+    if not options.quiet:
+        numOnline = 'The server has %d players filling %d total slots. There are %d free slots.' % (basicQuery['numplayers'], basicQuery['maxplayers'], basicQuery['maxplayers'] - basic_status['numplayers'])
+        playersOnline = 'Online now: %s' % (fullQuery['players'])
+        return numOnline + "\n" + playersOnline
+
+    return "ermahgerd"
 
 if __name__ == '__main__':
     app.run()
