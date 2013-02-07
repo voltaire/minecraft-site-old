@@ -5751,6 +5751,30 @@ a.badge:hover {
   color: inherit;
 }
 
+.content-unit {
+  padding: 60px;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.content-unit h1 {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: inherit;
+}
+
+.content-unit p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+}
+
 .pull-right {
   float: right;
 }
