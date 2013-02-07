@@ -1,15 +1,15 @@
-$('.hero-unit').css({
+$('.centerMe').css({
     position:'absolute',
-    left: ($(window).width() - $('.hero-unit').outerWidth())/2,
-    top: ($(window).height() - $('.hero-unit').outerHeight())/2
+    left: ($(window).width() - $('.centerMe').outerWidth())/2,
+    top: ($(window).height() - $('.centerMe').outerHeight())/2
 });
 
 $(window).resize(function(){
 
-        $('.hero-unit').css({
+        $('.centerMe').css({
                 position:'absolute',
-                left: ($(window).width() - $('.hero-unit').outerWidth())/2,
-                top: ($(window).height() - $('.hero-unit').outerHeight())/2
+                left: ($(window).width() - $('.centerMe').outerWidth())/2,
+                top: ($(window).height() - $('.centerMe').outerHeight())/2
         });
 
 });
