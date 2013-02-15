@@ -1,0 +1,8 @@
+<!doctype html>
+<title>herpderp</title>
+    <h3>Online Now:</h3>
+    {% for player in  avvys %}
+    <a href="#" class="avatars" data-placement="bottom" style="display:inline-block" data-toggle="tooltip" title="{{ player }}"><img src="https://minotar.net/helm/{{ player }}/60.png"></a>
+    {% endfor %}
+    <script type="text/javascript">$('.avatars').tooltip();</script>
+
