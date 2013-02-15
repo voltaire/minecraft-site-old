@@ -11,7 +11,7 @@ def returnStatus():
     all_status = query.get_rules()
     server_info = 'The server has %d / %d players.' % (basic_status['numplayers'], basic_status['maxplayers'])
     vanillaPlayers = MinecraftQuery("mc.voltaire.sh",25565).get_rules()['players']
-    return render_template('derp.html', avvys=vanillaPlayers)
+    return render_template('derp.html', avatars=vanillaPlayers)
 
 if __name__ == '__main__':
     app.run()
