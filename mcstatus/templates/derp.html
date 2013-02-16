@@ -1,6 +1,10 @@
 <!doctype html>
 <title>herpderp</title>
-    <h3>Online Now:</h3>
+    <h3>
+        {% if numplayers == 0 %} Nobody is being awesome right now.
+        {% elif numplayers == 1 %} The Lone Ranger:
+        {% elif numplayers > 1 %}{{ numplayers }} Minecrafters online now:{% endif %}
+    </h3>
     {% for player in avatars %}
     <a href="#" class="avatars" data-placement="bottom" style="display:inline-block" data-toggle="tooltip" title="{{ player }}"><img src="https://minotar.net/helm/{{ player }}/60.png"></a>
     {% endfor %}
